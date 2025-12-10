@@ -12,10 +12,10 @@
 This system allows hospitals to manage patient data securely. It distinguishes between **Admin** operations (creating/updating profiles) and **Doctor** operations (diagnosing/prescribing). 
 
 **Key Features:**
-- ** Role-Based Access Control**: Strict separation between Admin and Doctor capabilities.
-- ** Optimistic Concurrency Control**: Prevents data loss when multiple staff members edit a record simultaneously.
-- ** Auto-Archiving**: Background jobs automatically archive old visit records to maintain performance.
-- ** Production Ready**: Configured for deployment on platforms like Render or Vercel.
+- **Role-Based Access Control**: Strict separation between Admin and Doctor capabilities.
+- **Optimistic Concurrency Control**: Prevents data loss when multiple staff members edit a record simultaneously.
+- **Auto-Archiving**: Background jobs automatically archive old visit records to maintain performance.
+- **Production Ready**: Configured for deployment on platforms like Render or Vercel.
 
 ---
 
@@ -106,4 +106,5 @@ node tests/integrationTest.js
 *Expected Result: One request succeeds (200 OK), the other fails (409 Conflict).*
 
 ---
+
 
