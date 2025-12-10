@@ -12,10 +12,10 @@
 This system allows hospitals to manage patient data securely. It distinguishes between **Admin** operations (creating/updating profiles) and **Doctor** operations (diagnosing/prescribing). 
 
 **Key Features:**
-- **🔒 Role-Based Access Control**: Strict separation between Admin and Doctor capabilities.
-- **⚡ Optimistic Concurrency Control**: Prevents data loss when multiple staff members edit a record simultaneously.
-- **🕒 Auto-Archiving**: Background jobs automatically archive old visit records to maintain performance.
-- **🚀 Production Ready**: Configured for deployment on platforms like Render or Vercel.
+- ** Role-Based Access Control**: Strict separation between Admin and Doctor capabilities.
+- ** Optimistic Concurrency Control**: Prevents data loss when multiple staff members edit a record simultaneously.
+- ** Auto-Archiving**: Background jobs automatically archive old visit records to maintain performance.
+- ** Production Ready**: Configured for deployment on platforms like Render or Vercel.
 
 ---
 
@@ -107,14 +107,3 @@ node tests/integrationTest.js
 
 ---
 
-## 🚀 Deployment
-
-### Deploy to Render (Recommended)
-1. Push this code to **GitHub/GitLab**.
-2. Create a **New Web Service** on [Render](https://render.com).
-3. Connect your repository.
-4. Add Environment Variable:
-   - `DATABASE_URL`: Your internal/external Postgres connection string.
-5. Click **Deploy**.
-
-*Note: Render is recommended because it supports the persistent background process required for the Auto-Archive cron job.*
