@@ -2,11 +2,9 @@ const axios = require('axios');
 const { spawn } = require('child_process');
 const path = require('path');
 
-const PORT = 3001; // Use a different port for testing
+const PORT = 3001;
 process.env.PORT = PORT;
-process.env.DB_NAME = 'postgres'; // Use default postgres db for test just to make sure it connects if user didn't create the specific DB
-// ACTUALLY, sticking to the .env config is better, assuming the user will create the DB or has one.
-// Let's assume standard config from .env but override PORT.
+process.env.DB_NAME = 'postgres'; 
 
 const API_URL = `http://localhost:${PORT}/api`;
 
@@ -19,8 +17,6 @@ async function runTests() {
     stdio: 'inherit',
     cwd: path.resolve(__dirname, '..')
   });
-
-  // Give server time to start
   await sleep(5000);
 
   try {
